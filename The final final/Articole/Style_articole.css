@@ -1,0 +1,147 @@
+/*Copyright Mariș Octavian-Codrin 2025*/
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Page Title */
+h1 {
+    font-size: 28px;
+    color: #00ffcc;
+    text-shadow: 0px 0px 10px rgba(0, 255, 204, 0.8);
+    margin-top: 20px;
+}
+
+/* Article Content */
+article {
+    max-width: 800px;
+    background: #222;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 255, 204, 0.5);
+    text-align: left;
+}
+
+h2 {
+    color: #00ffcc;
+    font-size: 22px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Images */
+img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 255, 204, 0.5);
+    margin-bottom: 15px;
+}
+
+/* Lists */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background: rgba(0, 255, 204, 0.2);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+/* Navigation Menu */
+nav {
+    background: #111;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 0px 10px rgba(0, 255, 204, 0.5);
+}
+
+nav a {
+    color: #00ffcc;
+    font-size: 18px;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    article {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+/* Style for Password Manager Section */
+.password-manager-links {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.manager-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #00ffcc;
+    color: black;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    width: 250px;
+    margin: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 255, 204, 0.4);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.manager-link:hover {
+    background-color: #00cc99;
+    transform: scale(1.05);
+}
+
+.manager-logo {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+#matrixCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Keeps it in the background */
+    background-color: black; /* Ensure full dark coverage */
+}
