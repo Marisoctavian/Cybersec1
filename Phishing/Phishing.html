@@ -1,0 +1,69 @@
+<!--Copyright Mariș Octavian-Codrin 2025-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Challenge</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            color: black;
+            text-align: center;
+            padding: 20px;
+        }
+        .email-container {
+            background-color: white;
+            padding: 20px;
+            max-width: 600px;
+            margin: auto;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            text-align: left;
+        }
+        .hidden-link {
+            color: inherit;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .highlight {
+            background-color: rgba(255, 0, 0, 0.3);
+            border-radius: 3px;
+            padding: 2px 5px;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h2>Phishing Email Challenge</h2>
+    <p>Click on all the suspicious elements in this email.</p>
+    <div class="email-container">
+        <p><strong>From:</strong> <span class="hidden-link" onclick="markAsSuspicious(this)">support@paypal-secure.com</span></p>
+        <p><strong>Subject:</strong> Urgent: Account Suspension Notice</p>
+        <p>Dear Customer,</p>
+        <p>We have detected <span class="hidden-link" onclick="markAsSuspicious(this)">unusual activity</span> on your account. Please <span class="hidden-link" onclick="markAsSuspicious(this)">verify your account details</span> immediately to prevent suspension.</p>
+        <p>Click <span class="hidden-link" onclick="markAsSuspicious(this)">here</span> to confirm your identity.</p>
+        <p>Thank you,<br> PayPal Security Team</p>
+    </div>
+    <p id="result"></p>
+    <script>
+        let suspiciousCount = 0;
+        const totalSuspicious = 4;
+        
+        function markAsSuspicious(element) {
+            if (!element.classList.contains("highlight")) {
+                element.classList.add("highlight");
+                suspiciousCount++;
+            }
+            if (suspiciousCount === totalSuspicious) {
+                document.getElementById("result").textContent = "✅ Congratulations! You found all phishing red flags!Those are catch-phrases that scamers use!";
+            }
+        }
+    </script>
+</body>
+</html>
